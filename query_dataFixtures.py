@@ -22,7 +22,7 @@ with open('products.json') as file :
 
 products_list = json.loads(jsonFile)
 
-rows = []
+rows = ""
 
 for keys, products in products_list.items() :
 
@@ -45,24 +45,18 @@ for keys, products in products_list.items() :
         
         created_at = my_date.strftime('%Y-%m-%d %H:%M:%S')      
         
-        row = (title, stock, product_description, created_at, id_category)
+        row = f'("{title}", {stock}, "{product_description}", "{created_at}", {id_category}) '
         
-      
-        rows.append(row)
+        if index == len(products) - 1 and keys == "vetement":
+            row += "; "
+        else :
+            row += ", "
+        
+        rows += row
+        
 
-print(rows)    
+query = "TRUNCATE TABLE product; INSERT INTO product(title, stock, description, created_at, id_category) VALUES " + rows
 
-truncate_query = "TRUNCATE TABLE product;"
-
-query = "INSERT INTO product(title, stock, description, created_at, id_category) VALUES (%s, %s, %s, %s, %s)"
-
-
-#execute the truncate table query
-objectConnection = dbconnection(mc, connection_parameters)
-executeQuery(objectConnection, truncate_query, "edit")
-
-
-#execute the insert into query with the data
-objectConnection = dbconnection(mc, connection_parameters)
-executeQuery(objectConnection, query, "edit", rows)
+with open("query.sql", "w") as file :
+    file.write(query)
 

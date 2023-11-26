@@ -1,8 +1,4 @@
-import mysql.connector as mc
-
 from mysql.connector import Error
-
-from config import connection_parameters
 
 
 def dbconnection(mysql_connector, params_connection):
