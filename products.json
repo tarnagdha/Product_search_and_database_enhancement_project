@@ -1,0 +1,356 @@
+{
+    "alimentaire": [
+        {
+            "nom": "Pain",
+            "description": "Pain frais quotidien, croustillant à l'extérieur et moelleux à l'intérieur, parfait pour accompagner vos repas."
+        },
+        {
+            "nom": "Lait",
+            "description": "Lait frais de qualité, riche en calcium et en vitamines essentielles pour une alimentation équilibrée."
+        },
+        {
+            "nom": "Œufs",
+            "description": "Œufs fermiers biologiques, source de protéines et d'éléments nutritifs essentiels pour une cuisine saine."
+        },
+        {
+            "nom": "Fromage",
+            "description": "Fromage affiné, aux saveurs riches et variées, parfait pour les plateaux de fromages ou les sandwiches."
+        },
+        {
+            "nom": "Yaourt",
+            "description": "Yaourt onctueux et crémeux, une collation saine et délicieuse, disponible en différentes saveurs."
+        },
+        {
+            "nom": "Fruits",
+            "description": "Sélection de fruits frais de saison, naturellement sucrés et riches en vitamines."
+        },
+        {
+            "nom": "Légumes",
+            "description": "Légumes frais et croquants, parfaits pour préparer des plats savoureux et nutritifs."
+        },
+        {
+            "nom": "Viande de bœuf",
+            "description": "Viande de bœuf de qualité supérieure, tendre et juteuse, idéale pour griller ou mijoter."
+        },
+        {
+            "nom": "Poulet",
+            "description": "Filets de poulet frais, maigres et polyvalents, parfaits pour une variété de recettes savoureuses."
+        },
+        {
+            "nom": "Poisson",
+            "description": "Poisson frais de la mer, riche en acides gras oméga-3, excellent pour la santé cardiaque."
+        },
+        {
+            "nom": "Riz",
+            "description": "Riz de qualité supérieure, idéal comme accompagnement pour de nombreux plats du monde entier."
+        },
+        {
+            "nom": "Pâtes",
+            "description": "Pâtes italiennes de première qualité, parfaites avec une variété de sauces et d'accompagnements."
+        },
+        {
+            "nom": "Céréales",
+            "description": "Céréales complètes et nutritives, un excellent choix pour un petit-déjeuner sain et énergétique."
+        },
+        {
+            "nom": "Soupes en conserve",
+            "description": "Soupes délicieuses en conserve, une option rapide et réconfortante pour les jours chargés."
+        },
+        {
+            "nom": "Pizzas surgelées",
+            "description": "Pizzas surgelées de qualité, garnies d'ingrédients frais, prêtes en quelques minutes."
+        },
+        {
+            "nom": "Jus de fruits",
+            "description": "Jus de fruits naturels, rafraîchissants et pleins de vitamines essentielles."
+        },
+        {
+            "nom": "Eau en bouteille",
+            "description": "Eau minérale pure en bouteille, une option saine pour rester hydraté tout au long de la journée."
+        },
+        {
+            "nom": "Café",
+            "description": "Café moulu de première qualité, riche en arômes, parfait pour commencer votre journée."
+        },
+        {
+            "nom": "Thé",
+            "description": "Thé de haute qualité, aromatique et apaisant, disponible dans une variété de saveurs."
+        },
+        {
+            "nom": "Huile d'olive",
+            "description": "Huile d'olive extra vierge, parfaite pour assaisonner les salades et cuisiner des plats délicieux."
+        },
+        {
+            "nom": "Vinaigre balsamique",
+            "description": "Vinaigre balsamique vieilli, ajoutant une touche de saveur sucrée et acidulée à vos plats."
+        },
+        {
+            "nom": "Sel",
+            "description": "Sel de mer fin, idéal pour assaisonner vos plats et rehausser les saveurs naturelles des aliments."
+        },
+        {
+            "nom": "Poivre",
+            "description": "Poivre noir fraîchement moulu, ajoutant une chaleur subtile et des arômes aux plats cuisinés."
+        },
+        {
+            "nom": "Sucre",
+            "description": "Sucre cristallisé de qualité, idéal pour sucrer vos boissons chaudes et préparer des desserts délicieux."
+        },
+        {
+            "nom": "Chocolat",
+            "description": "Chocolat noir de qualité, riche en cacao, parfait pour les amateurs de chocolat."
+        },
+        {
+            "nom": "Biscuits",
+            "description": "Assortiment de biscuits croquants, idéal pour accompagner une pause café ou un goûter rapide."
+        },
+        {
+            "nom": "Chips",
+            "description": "Chips croustillantes de pommes de terre, parfaites pour une collation savoureuse."
+        },
+        {
+            "nom": "Sauce tomate",
+            "description": "Sauce tomate savoureuse, parfaite pour préparer des pâtes, des pizzas et d'autres plats délicieux."
+        },
+        {
+            "nom": "Confiture",
+            "description": "Confiture artisanale, préparée avec des fruits frais, idéale pour tartiner sur du pain ou des biscottes."
+        }
+    ],
+    "electronique": [
+        {
+            "nom": "Smartphone",
+            "description": "Un smartphone dernier cri avec un écran haute résolution, un appareil photo avancé et des fonctionnalités intelligentes pour rester connecté."
+        },
+        {
+            "nom": "Ordinateur portable",
+            "description": "Un ordinateur portable puissant et portable, parfait pour le travail et les loisirs, avec un processeur rapide et un design élégant."
+        },
+        {
+            "nom": "Tablette",
+            "description": "Une tablette tactile légère et polyvalente, idéale pour la navigation, le streaming et la productivité en déplacement."
+        },
+        {
+            "nom": "Téléviseur",
+            "description": "Un téléviseur intelligent avec une qualité d'image exceptionnelle, des fonctionnalités de streaming et une connectivité avancée pour une expérience cinématographique à la maison."
+        },
+        {
+            "nom": "Casque audio",
+            "description": "Un casque audio haut de gamme offrant une qualité sonore exceptionnelle, un confort optimal et une annulation de bruit pour une immersion totale."
+        },
+        {
+            "nom": "Enceinte Bluetooth",
+            "description": "Une enceinte portable Bluetooth puissante, offrant un son cristallin et une autonomie longue durée pour animer toutes vos fêtes."
+        },
+        {
+            "nom": "Appareil photo numérique",
+            "description": "Un appareil photo numérique avancé avec des fonctionnalités professionnelles, idéal pour capturer des moments inoubliables avec une qualité exceptionnelle."
+        },
+        {
+            "nom": "Montre connectée",
+            "description": "Une montre connectée élégante avec des fonctionnalités intelligentes, y compris le suivi d'activité, les notifications et la compatibilité avec les applications populaires."
+        },
+        {
+            "nom": "Imprimante",
+            "description": "Une imprimante multifonction rapide et fiable, idéale pour l'impression de documents de haute qualité à domicile ou au bureau."
+        },
+        {
+            "nom": "Routeur Wi-Fi",
+            "description": "Un routeur Wi-Fi haute performance offrant une connectivité rapide et stable pour tous vos appareils, garantissant une expérience Internet sans faille."
+        },
+        {
+            "nom": "Souris sans fil",
+            "description": "Une souris sans fil ergonomique avec une précision exceptionnelle, parfaite pour une utilisation quotidienne avec votre ordinateur portable ou de bureau."
+        },
+        {
+            "nom": "Clavier Bluetooth",
+            "description": "Un clavier sans fil Bluetooth élégant et réactif, idéal pour une saisie confortable sur divers appareils."
+        },
+        {
+            "nom": "Écouteurs sans fil",
+            "description": "Des écouteurs sans fil compacts avec une qualité audio exceptionnelle, un ajustement confortable et une autonomie prolongée."
+        },
+        {
+            "nom": "Console de jeux vidéo",
+            "description": "Une console de jeux vidéo de dernière génération offrant des graphismes époustouflants, une expérience de jeu immersive et une vaste bibliothèque de jeux."
+        },
+        {
+            "nom": "Caméra de sécurité",
+            "description": "Une caméra de sécurité intelligente avec une résolution haute définition et des fonctionnalités de surveillance avancées pour assurer la sécurité de votre domicile."
+        },
+        {
+            "nom": "Disque dur externe",
+            "description": "Un disque dur externe spacieux pour le stockage sécurisé de vos données, offrant une grande capacité et une vitesse de transfert rapide."
+        },
+        {
+            "nom": "Chargeur sans fil",
+            "description": "Un chargeur sans fil élégant compatible avec une variété d'appareils, offrant une charge rapide et pratique."
+        },
+        {
+            "nom": "Lampe LED intelligente",
+            "description": "Une lampe LED intelligente avec des options de couleur ajustables, contrôlable via une application pour créer l'ambiance parfaite dans n'importe quelle pièce."
+        },
+        {
+            "nom": "Aspirateur robot",
+            "description": "Un aspirateur robot intelligent qui nettoie automatiquement votre maison avec des capteurs avancés et une planification programmable."
+        },
+        {
+            "nom": "Thermomètre connecté",
+            "description": "Un thermomètre connecté qui permet de surveiller la température à distance via une application, idéal pour la cuisine et la santé."
+        },
+        {
+            "nom": "Balance intelligente",
+            "description": "Une balance intelligente qui mesure non seulement le poids, mais aussi d'autres métriques corporelles importantes, synchronisée avec une application pour le suivi de la santé."
+        },
+        {
+            "nom": "Réveil intelligent",
+            "description": "Un réveil intelligent avec des fonctionnalités de contrôle vocal, de la musique intégrée et des informations météorologiques pour commencer votre journée du bon pied."
+        },
+        {
+            "nom": "Câble USB-C",
+            "description": "Un câble USB-C robuste et rapide, idéal pour charger vos appareils et transférer des données à des vitesses élevées."
+        },
+        {
+            "nom": "Adaptateur secteur",
+            "description": "Un adaptateur secteur compact et puissant pour charger rapidement tous vos appareils électroniques."
+        },
+        {
+            "nom": "Étui de protection pour smartphone",
+            "description": "Un étui de protection élégant et robuste pour votre smartphone, offrant une protection contre les chocs et les rayures."
+        },
+        {
+            "nom": "Support pour ordinateur portable",
+            "description": "Un support ergonomique pour ordinateur portable, idéal pour améliorer la posture et la circulation de l'air autour de votre appareil."
+        },
+        {
+            "nom": "Carte mémoire",
+            "description": "Une carte mémoire haute capacité pour étendre le stockage de vos appareils photo, smartphones et autres dispositifs."
+        },
+        {
+            "nom": "Écran d'ordinateur",
+            "description": "Un écran d'ordinateur haute résolution avec des couleurs vives, parfait pour le travail, le jeu et le streaming de contenu."
+        },
+        {
+            "nom": "Batterie externe",
+            "description": "Une batterie externe portable avec une grande capacité, idéale pour charger vos appareils lors de déplacements ou en cas d'urgence."
+        }
+    ],
+    "vetement": [
+        {
+            "nom": "T-shirt",
+            "description": "Un t-shirt basique et confortable, idéal pour un look décontracté au quotidien."
+        },
+        {
+            "nom": "Chemise",
+            "description": "Une chemise élégante pour des occasions formelles ou pour une tenue chic décontractée."
+        },
+        {
+            "nom": "Pull",
+            "description": "Un pull chaud et doux, parfait pour les journées fraîches d'automne et d'hiver."
+        },
+        {
+            "nom": "Veste en cuir",
+            "description": "Une veste en cuir tendance, ajoutant une touche de style rebelle à votre garde-robe."
+        },
+        {
+            "nom": "Jean slim",
+            "description": "Un jean slim ajusté pour un look moderne et élégant, parfait avec des baskets ou des bottines."
+        },
+        {
+            "nom": "Robe d'été",
+            "description": "Une robe légère et colorée, parfaite pour les journées ensoleillées et les escapades estivales."
+        },
+        {
+            "nom": "Costume",
+            "description": "Un costume élégant pour les occasions spéciales, avec une coupe impeccable et des détails raffinés."
+        },
+        {
+            "nom": "Chaussures de sport",
+            "description": "Des chaussures de sport confortables et stylées, idéales pour l'entraînement ou les activités décontractées."
+        },
+        {
+            "nom": "Chaussures à talons",
+            "description": "Des chaussures à talons élégantes, parfaites pour compléter une tenue habillée et sophistiquée."
+        },
+        {
+            "nom": "Écharpe",
+            "description": "Une écharpe douce et chaude, ajoutant une touche de confort et de style à vos tenues d'hiver."
+        },
+        {
+            "nom": "Bonnet",
+            "description": "Un bonnet en tricot confortable, idéal pour garder votre tête au chaud par temps froid."
+        },
+        {
+            "nom": "Gants",
+            "description": "Des gants élégants et fonctionnels, parfaits pour rester au chaud tout en restant tendance."
+        },
+        {
+            "nom": "Sac à main",
+            "description": "Un sac à main chic et pratique, idéal pour transporter vos essentiels avec style."
+        },
+        {
+            "nom": "Ceinture",
+            "description": "Une ceinture polyvalente, ajoutant une touche finale à vos tenues et soulignant votre silhouette."
+        },
+        {
+            "nom": "Maillot de bain",
+            "description": "Un maillot de bain élégant, parfait pour les journées ensoleillées à la plage ou à la piscine."
+        },
+        {
+            "nom": "Short",
+            "description": "Un short décontracté et confortable, idéal pour les journées chaudes d'été."
+        },
+        {
+            "nom": "Jupe",
+            "description": "Une jupe féminine et tendance, parfaite pour créer des looks élégants en toute saison."
+        },
+        {
+            "nom": "Blouson en jean",
+            "description": "Un blouson en jean classique, un incontournable décontracté pour toutes les saisons."
+        },
+        {
+            "nom": "Sweat à capuche",
+            "description": "Un sweat à capuche doux et décontracté, idéal pour une tenue confortable les jours de détente."
+        },
+        {
+            "nom": "Chaussettes",
+            "description": "Des chaussettes confortables et colorées, ajoutant une touche de fantaisie à votre style quotidien."
+        },
+        {
+            "nom": "Pyjama",
+            "description": "Un pyjama doux et confortable, parfait pour passer des nuits paisibles et reposantes."
+        },
+        {
+            "nom": "Chapeau",
+            "description": "Un chapeau tendance pour ajouter du flair à votre tenue, que ce soit pour une journée ensoleillée ou pour un événement décontracté."
+        },
+        {
+            "nom": "Pantalon de jogging",
+            "description": "Un pantalon de jogging décontracté, idéal pour les journées décontractées à la maison ou à l'extérieur."
+        },
+        {
+            "nom": "Chemisier",
+            "description": "Un chemisier élégant, parfait pour des looks professionnels ou décontractés, selon l'occasion."
+        },
+        {
+            "nom": "Polo",
+            "description": "Un polo classique et confortable, idéal pour un style décontracté et élégant."
+        },
+        {
+            "nom": "Soutien-gorge",
+            "description": "Un soutien-gorge confortable et bien ajusté, essentiel pour un soutien optimal au quotidien."
+        },
+        {
+            "nom": "Caleçon",
+            "description": "Des caleçons confortables et stylés, ajoutant une touche de personnalité à votre tiroir à sous-vêtements."
+        },
+        {
+            "nom": "Cravate",
+            "description": "Une cravate élégante, parfaite pour compléter un costume formel ou ajouter une touche sophistiquée à une tenue décontractée."
+        },
+        {
+            "nom": "Manteau",
+            "description": "Un manteau élégant et chaud, idéal pour affronter les journées froides avec style."
+        }
+    ]
+}
