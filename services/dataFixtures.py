@@ -6,13 +6,16 @@ from datetime import datetime, timedelta
 
 import unicodedata
 
+import mysql.connector as mc
+
 from dbConnection import dbconnection
 
 from cursor import executeQuery
 
+import sys
+sys.path.append("C:/Users/HP/Desktop/Project_2")
 from config import connection_parameters
 
-import mysql.connector as mc
 
 print("Ouvrons le fichier JSON")
 with open('products.json') as file :
@@ -22,7 +25,7 @@ with open('products.json') as file :
 
 products_list = json.loads(jsonFile)
 
-rows = ""
+rows = []
 
 for keys, products in products_list.items() :
 
@@ -44,19 +47,26 @@ for keys, products in products_list.items() :
         my_date = today - timedelta(days = random.randint(1,30)) 
         
         created_at = my_date.strftime('%Y-%m-%d %H:%M:%S')      
+        price = random.uniform(5.0, 999999.0)
         
-        row = f'("{title}", {stock}, "{product_description}", "{created_at}", {id_category}) '
+        row = (title, stock, product_description, created_at, id_category, price)
         
-        if index == len(products) - 1 and keys == "vetement":
-            row += "; "
-        else :
-            row += ", "
-        
-        rows += row
-        
+      
+        rows.append(row)
 
-query = "TRUNCATE TABLE product; INSERT INTO product(title, stock, description, created_at, id_category) VALUES " + rows
+print(rows)    
 
-with open("query.sql", "w") as file :
-    file.write(query)
+truncate_query = "TRUNCATE TABLE product;"
+
+query = "INSERT INTO product(title, stock, description, created_at, id_category, price) VALUES (%s, %s, %s, %s, %s, %s)"
+
+
+#execute the truncate table query
+objectConnection = dbconnection(mc, connection_parameters)
+executeQuery(objectConnection, truncate_query, "edit")
+
+
+#execute the insert into query with the data
+objectConnection = dbconnection(mc, connection_parameters)
+executeQuery(objectConnection, query, "edit", rows)
 
