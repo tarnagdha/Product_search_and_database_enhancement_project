@@ -47,7 +47,7 @@ for keys, products in products_list.items() :
         my_date = today - timedelta(days = random.randint(1,30)) 
         
         created_at = my_date.strftime('%Y-%m-%d %H:%M:%S')      
-        price = random.uniform(5.0, 999999.0)
+        price = random.uniform(5,500000)
         
         row = (title, stock, product_description, created_at, id_category, price)
         

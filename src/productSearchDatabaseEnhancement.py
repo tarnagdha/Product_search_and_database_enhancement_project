@@ -11,12 +11,13 @@ from services.dbConnection import dbconnection
 
 from config import connection_parameters
 
+from tabulate import tabulate
+
 
 
 print("""Recherche de Produit.
 Indication: Le nom de produit doit comporter au moins trois lettre""")
-
-caractereSpeciaux = ["@", "%", "à","ç", "&"]
+caractereSpeciaux = ["@", "%", "<","$", "&", "_", "-", "!", "#", "/", "?", "µ", "*", "=", '"', "'"]
 
 while True:
     research = input("Rentrez une recherche ou appuyez sur Q pour quitter ")
@@ -52,23 +53,35 @@ while True:
                     print(research)
                     
                     #Requete de matching de la recherche
-                    Query_1 =(f"""SELECT * FROM product WHERE title like "%{research}%" OR description like "%{research}%" """)
-                    Query_research = Query_1
-                    print(Query_research)
+                    Query_research =f"""
+                    SELECT title, stock, price, c.name, created_at
+                    
+                    FROM product as p
+                    
+                    INNER JOIN category as c ON c.id = p.id_category
 
+                    WHERE title like "%{research}%" OR description like "%{research}%" 
+                    
+                    """
 
                     #Connexion à la base de donnée et matching de la recherche
                     objectConnection = dbconnection(mc, connection_parameters)
                     results = executeQuery(objectConnection, Query_research, "show")
                     
+                    #Verification du nombre de lettres rentré par user
                     number_results = len(results)
 
                     if number_results < 1 :
                         print("Aucun resultat")
 
                     else :
-                        print(f"Nous avous {number_results} resultat(s) !" )
-                        print(results)
+                        print(f"Nous avous trouvé {number_results} resultat(s) !" )
+                        
+                        #Affichage du resultat sous forme tableau dans la console
+                        headers_names = ["title", "stock", "price", "category", "created_at"]
+                        tableau_results = tabulate(results, headers_names, tablefmt='fancy_grid')
+                        
+                        print(tableau_results)
 
             except ValueError:
                 print ("Recherche invalide.")
