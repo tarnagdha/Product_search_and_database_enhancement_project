@@ -1,28 +1,36 @@
-import sys
-sys.path.append("C:/Users/HP/Desktop/Project_2")
+import pandas as pd
+
+import os
+
+import time
 
 import mysql.connector as mc
 
-from services.dbConnection import dbconnection
+import sys
+sys.path.append("C:/Users/HP/Desktop/Project_2")
 
+from generate_excel import generateExcel
+from services.dbConnection import dbconnection
 from services.cursor import executeQuery
-
 from services.dbConnection import dbconnection
-
+from services.utils import currentDateToMicroSecond, createFolder
 from config import connection_parameters
-
 from tabulate import tabulate
 
 
 
-print("""Recherche de Produit.
-Indication: Le nom de produit doit comporter au moins trois lettre""")
+
 caractereSpeciaux = ["@", "%", "<","$", "&", "_", "-", "!", "#", "/", "?", "µ", "*", "=", '"', "'"]
 
+print("Recherche de Produit.\nIndication: Le nom de produit doit comporter au moins trois lettres.") 
+print(f"Les caratères suivants ne sont pas autorisés: {caractereSpeciaux}\n")
+
+      
+
 while True:
-    research = input("Rentrez une recherche ou appuyez sur Q pour quitter ")
+    research = input("Rentrez une recherche ou rentrez sur Q pour quitter \n> ")
     
-    if research == "Q" :
+    if research.lower() == "q":
         break  
 
 
@@ -33,7 +41,7 @@ while True:
 
 
         if len(list_research) < 3 :
-            print("Rentrez invalide. Veuillez rentrer au moins lettres")
+            print("Rentrez invalide. Veuillez rentrer au moins lettres >")
       
         else :
             
@@ -49,9 +57,8 @@ while True:
                 if len(intersection) > 0 :
                     print("Rentrez invalide. Veuillez eviter les caractères spéciaux.")
 
-                else: 
-                    print(research)
-                    
+                else:
+
                     #Requete de matching de la recherche
                     Query_research =f"""
                     SELECT title, stock, price, c.name, created_at
@@ -72,20 +79,32 @@ while True:
                     number_results = len(results)
 
                     if number_results < 1 :
-                        print("Aucun resultat")
+                        print("\n<<< Aucun resultat >>> \n")
 
                     else :
                         print(f"Nous avous trouvé {number_results} resultat(s) !" )
                         
                         #Affichage du resultat sous forme tableau dans la console
-                        headers_names = ["title", "stock", "price", "category", "created_at"]
-                        tableau_results = tabulate(results, headers_names, tablefmt='fancy_grid')
+                        headersNames = ["title", "stock", "price", "category", "created_at"]
+                        table_results = tabulate(results, headersNames, tablefmt='fancy_grid')
                         
-                        print(tableau_results)
+                        print(table_results)                   
 
+                        #Question the user if he need to generate the results excel file
+                        print("Voulez vous generer les resulats sous format excel ?")
+                        generate_results_file = input("oui / non  \n>")
+
+                        if generate_results_file.lower() == "oui" :
+                           
+                           basePath = createFolder(os, "C:/Users/HP/Desktop/Project_2/results")
+                           currentTime = currentDateToMicroSecond(time)
+                           filePath = basePath + "/data_" +currentTime + ".xlsx" 
+
+
+                           generateExcel(results, pd, headersNames, filePath)
+                    
             except ValueError:
                 print ("Recherche invalide.")
 
             
         
-    
