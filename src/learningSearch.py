@@ -4,7 +4,7 @@ sys.path.append("C:/Users/HP/Desktop/Project_2")
 from sqlalchemy import create_engine
 import pandas as pd
 
-from config import dbinfo, port
+from config import connection_parameters, port
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
@@ -57,7 +57,7 @@ def search_products(query, df, model_file_path):
     return relevant_results
 
 # Charger les données depuis la base de données
-engine = create_engine(f'mysql+mysqlconnector://{dbinfo["user"]}:{dbinfo["password"]}@{dbinfo["host"]}:{port}/{dbinfo["database"]}')
+engine = create_engine(f'mysql+mysqlconnector://{connection_parameters["user"]}:{connection_parameters["password"]}@{connection_parameters["host"]}:{port}/{dbinfo["database"]}')
 query = "SELECT title, description FROM product"
 df = pd.read_sql(query, engine)
 
