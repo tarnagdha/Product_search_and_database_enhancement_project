@@ -1,4 +1,4 @@
-
+#Fonction generative de table excel à partir de tableau py
 def generateExcel(arrayresults, pandas_object, columns_names, pathFile):
     
 
